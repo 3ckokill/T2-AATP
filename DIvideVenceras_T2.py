@@ -5,8 +5,8 @@ def crear_palabra():
     return ''.join(chr(random.randint(97, 122)) for _ in range(4))
 
 
-def crear_matriz(tamano):
-    return [[crear_palabra() for _ in range(tamano)] for _ in range(tamano)]
+def crear_matriz(tamaño):
+    return [[crear_palabra() for _ in range(tamaño)] for _ in range(tamaño)]
 
 
 def tiene_vocal(palabra):
@@ -31,8 +31,8 @@ def contar_vocales_matriz(matriz):
             contar_vocales_matriz(abajo_der))
 
 
-tamano = int(input("Tamaño de la matriz: "))
-matriz = crear_matriz(tamano)
+tamaño = int(input("Tamaño de la matriz: "))
+matriz = crear_matriz(tamaño)
 
 for fila in matriz:
     print(' '.join(fila))
